@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import FamilyCard from './components/birthday';
+import ConfettiBackground from './components/confetti';
 
 const familyMembers = [
   {
@@ -34,20 +35,25 @@ export default function BirthdayPage() {
     <div 
       className="
         min-h-screen 
-        flex flex-col 
+        flex 
+        flex-col 
         items-center 
         justify-center 
-        bg-birthday-pattern 
-        p-8
+        p-8 
+        relative
+        overflow-hidden
       "
     >
+      <ConfettiBackground />
       <h1 
         className="
           text-5xl 
           font-birthday 
           text-family-peach 
           mb-12 
-          text-center
+          text-center 
+          z-10 
+          relative
         "
       >
         ¡Feliz Cumpleaños! 🎂
@@ -58,7 +64,9 @@ export default function BirthdayPage() {
           flex-wrap 
           justify-center 
           items-center 
-          gap-8
+          gap-8 
+          z-10 
+          relative
         "
       >
         {familyMembers.map((member, index) => (
