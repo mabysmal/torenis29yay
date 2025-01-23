@@ -15,7 +15,6 @@ const ConfettiBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    // Verificación de nulidad al inicio
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -31,22 +30,23 @@ const ConfettiBackground: React.FC = () => {
     };
 
     const createConfetti = () => {
-      // Solo crear confeti si el canvas existe
-      if (!canvas) return;
+      // Aumentado de 100 a 1000 confetis
+      for (let i = 0; i < 1000; i++) {
+        if (!canvas) return;
 
-      confetti.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        size: Math.random() * 10 + 5,
-        color: colors[Math.floor(Math.random() * colors.length)],
-        speed: Math.random() * 3 + 1,
-        amplitude: Math.random() * 2,
-        angle: Math.random() * Math.PI * 2
-      });
+        confetti.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: Math.random() * 7 + 3, // Reducido el tamaño para mayor densidad
+          color: colors[Math.floor(Math.random() * colors.length)],
+          speed: Math.random() * 3 + 1,
+          amplitude: Math.random() * 2,
+          angle: Math.random() * Math.PI * 2
+        });
+      }
     };
 
     const animateConfetti = () => {
-      // Verificaciones de seguridad
       if (!canvas || !ctx) return;
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -59,7 +59,17 @@ const ConfettiBackground: React.FC = () => {
 
         if (piece.y > canvas.height) {
           confetti.splice(i, 1);
-          createConfetti();
+          // Añadir un nuevo confeti cuando uno sale de la pantalla
+          if (!canvas) return;
+          confetti.push({
+            x: Math.random() * canvas.width,
+            y: 0,
+            size: Math.random() * 7 + 3,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            speed: Math.random() * 3 + 1,
+            amplitude: Math.random() * 2,
+            angle: Math.random() * Math.PI * 2
+          });
         }
 
         ctx.beginPath();
@@ -71,19 +81,16 @@ const ConfettiBackground: React.FC = () => {
       requestAnimationFrame(animateConfetti);
     };
 
-    // Configuración inicial
     resizeCanvas();
     createConfetti();
     animateConfetti();
 
-    // Listener de redimensionamiento
     window.addEventListener('resize', resizeCanvas);
 
-    // Limpieza
     return () => {
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, []); // Array de dependencias vacío para ejecutar solo una vez
+  }, []);
 
   return (
     <canvas 
