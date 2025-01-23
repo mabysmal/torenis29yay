@@ -9,9 +9,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'family-green': '#84906c',
+        'family-peach': '#f8a792', 
+        'family-cream': '#f7e4c3',
+        'family-gray': '#e6e6e6'
       },
+    },
+    fontFamily: {
+      'birthday': ['Indie Flower', 'cursive']
+    },
+    backgroundImage: {
+      'birthday-pattern': 'url("/birthday-pattern.svg")'
     },
   },
   plugins: [],
