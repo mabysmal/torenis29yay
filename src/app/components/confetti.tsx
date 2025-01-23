@@ -30,14 +30,14 @@ const ConfettiBackground: React.FC = () => {
     };
 
     const createConfetti = () => {
-      // Aumentado de 100 a 1000 confetis
-      for (let i = 0; i < 1000; i++) {
+      // Reducido a 500 confetis
+      for (let i = 0; i < 500; i++) {
         if (!canvas) return;
 
         confetti.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          size: Math.random() * 7 + 3, // Reducido el tamaño para mayor densidad
+          size: Math.random() * 7 + 3,
           color: colors[Math.floor(Math.random() * colors.length)],
           speed: Math.random() * 3 + 1,
           amplitude: Math.random() * 2,
@@ -59,7 +59,6 @@ const ConfettiBackground: React.FC = () => {
 
         if (piece.y > canvas.height) {
           confetti.splice(i, 1);
-          // Añadir un nuevo confeti cuando uno sale de la pantalla
           if (!canvas) return;
           confetti.push({
             x: Math.random() * canvas.width,
