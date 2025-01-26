@@ -19,27 +19,25 @@ const familyMembers = [
   },
   {
     name: "Aiden",
-    message: "",
     imageSrc: "/aiden.png", 
     backgroundColor: "#f7e4c3"
   },
   {
     name: "Tiffany",
-    message: "",
-    imageSrc: "/tiff.png",
+    message: "Happy bday Toren! I hope you have a fantastic day filled with lots of cake and fun!",
     backgroundColor: "#e6e6e6"
   },
   
   {
     name: "Rosa/Caramel",
-    message: "Meow.",
-    imageSrc: "/rosa.png",
+    message: "Meow, meow meou purr meow purr purr puuurrrr!.",
+    imageSrc: ["/rosa.jpg", "/rosa2.jpg", "/rosa3.jpg"],
     backgroundColor: "#f8a792"
   },
   {
     name: "Mabel",
     message: "",
-    imageSrc: "/me.png",
+    imageSrc: ["/mabel.jpg", "/mabel2.jpg", "/mabel3.jpg"],
     backgroundColor: "#84906c"
   },
   {
@@ -50,17 +48,44 @@ const familyMembers = [
   },
   {
     name: "Paloma",
-    message: "",
-    imageSrc: "/paloma.png",
+    message: "Happy birthday, Tory! I hope you have a great time today and that all your wishes come true. Save some cake for me, jijiji.",
+    imageSrc: ["/paloma.jpeg", "/paloma2.jpeg"],
     backgroundColor: "#e6e6e6"
   },
 
   {
     name: "Mama & Neto",
     message: "Dear Tory, on this very special day, we want to wish you a very happy birthday. From the bottom of our hearts, Ernesto and I want to thank you for being such a wonderful person and for taking such loving and dedicated care of our daughter Mabel. It is a true gift for us to know that she is in the hands of someone so kind, attentive, and full of admirable qualities. You are more than a son-in-law; you are an important part of our family, and we love you very much. We hope that this new year of life is full of blessings, joy, and unforgettable moments. Even though distance separates us physically, we send you a big hug from Monterrey, along with all our love. Enjoy your day to the fullest, because you deserve it. PS. Greetings to your parents, your brother, and his girlfriend. Celebrate a lot.",
-    imageSrc: "/.jpg",
+    imageSrc: "/mama.jpg",
     backgroundColor: "#f8a792"
   },
+  {
+    name: "Uncle Rick",
+    message: "",
+    backgroundColor: "#84906c"
+  },
+  {
+    name: "Noureddine",
+    message: "Happy Birthday Toren!! Wishing you a day filled with joy, laughter, and everything that makes you happy and content! It is truly a pleasure to not only call you a valued, bright and reliable mind as a colleague, but also a wonderful friend. May this year bring you lots of happiness, health, and exciting impactful outcomes and opportunities. Cheers to many more milestones together, and here's to celebrating you today! 🎉",
+    backgroundColor: "#f7e4c3"
+  },
+  {
+    name: "James",
+    message: "happy birthday dood. have fun being old",
+    imageSrc: "/james.JPG",
+    backgroundColor: "#e6e6e6"
+  },
+  {
+    name: "Charlotte",
+    message: "HAPPIEST BIRTHDAY TOREN MY FRIEND. I SEND YOU LOTS LOTS OF ELECTRICITY & BRAIN POWER + ENERGY TO HELP YOU NAVIGATE THE BEST BDAY YEAR — LUFF LUFF LUFF TO YOU & MABEL",
+    backgroundColor: "#f8a792"
+  },
+  {
+    name: "Aunt Andy",
+    message: "Happy birthday nephew, may there be many more years of blessings 🎂🥂✨",
+    backgroundColor: "#84906c"
+  },
+
 
 ];
 
