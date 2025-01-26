@@ -7,14 +7,14 @@ const familyMembers = [
   // Familia
   {
     name: "Mom",
-    message: "Mi amor, eres la luz que ilumina nuestra familia. ¡Feliz cumpleaños!",
-    imageSrc: "/mama.jpg",
+    message: "In January 1996, the world was a different place. There was no Google yet. More significantly, there was no Toren James Darby yet, at least not visibly. How lucky the world got to be on the 27th  of January",
+    imageSrc: "/mom.JPG",
     backgroundColor: "#f8a792"
   },
   {
     name: "Dad", 
-    message: "Eres mi héroe, mi mejor amigo. Gracias por todo tu amor.",
-    imageSrc: "/papa.jpg",
+    message: "Dear Toren, You are a bright light, a warm feeling, and a joy. Almost every day you bring laughter and comfort to our lives. Smiles and hugs.",
+    imageSrc: "/dad.jpg",
     backgroundColor: "#84906c"
   },
   {
@@ -25,61 +25,63 @@ const familyMembers = [
   },
   {
     name: "Tiffany",
-    message: "Gracias por ser mi familia, por su amor incondicional.",
-    imageSrc: "/yo.jpg",
+    message: "",
+    imageSrc: "/tiff.png",
     backgroundColor: "#e6e6e6"
   },
   
   {
     name: "Rosa/Caramel",
-    message: "Amigo, eres como un hermano. Celebro tu vida hoy y siempre.",
-    imageSrc: "/carlos.jpg",
+    message: "Meow.",
+    imageSrc: "/rosa.png",
     backgroundColor: "#f8a792"
   },
   {
     name: "Mabel",
-    message: "Compañero de aventuras, gracias por todos los momentos increíbles.",
-    imageSrc: "/daniel.jpg",
+    message: "",
+    imageSrc: "/me.png",
     backgroundColor: "#84906c"
   },
   {
-    name: "Fernando",
-    message: "Tu amistad es un regalo. ¡Feliz cumpleaños, hermano!",
-    imageSrc: "/fernando.jpg",
+    name: "Papa",
+    message: "Tory, congratulations on your birthday!!! I send you a warm hug!! I hope you spend a very special day in the company of Mabelita and your family!!! Congratulations!!!",
+    imageSrc: "/papa.jpeg",
     backgroundColor: "#f7e4c3"
   },
   {
-    name: "Javier",
-    message: "Cada conversación contigo es una aventura. ¡Te quiero, amigo!",
-    imageSrc: "/javier.jpg",
+    name: "Paloma",
+    message: "",
+    imageSrc: "/paloma.png",
     backgroundColor: "#e6e6e6"
   },
   
   // Familia extendida o más amigos
-  {
-    name: "Tía María",
-    message: "Desde pequeño te he visto crecer. Estoy tan orgullosa de ti.",
-    imageSrc: "/tia-maria.jpg",
-    backgroundColor: "#f8a792"
-  },
-  {
-    name: "Abuelo José",
-    message: "Eres el orgullo de nuestra familia. Bendiciones en tu día.",
-    imageSrc: "/abuelo-jose.jpg",
-    backgroundColor: "#84906c"
-  },
-  {
-    name: "Primo Roberto",
-    message: "Juntos desde la infancia, siempre seremos familia.",
-    imageSrc: "/primo-roberto.jpg",
-    backgroundColor: "#f7e4c3"
-  },
-  {
-    name: "Andrea",
-    message: "Tu amistad significa el mundo para mí. ¡Feliz día!",
-    imageSrc: "/andrea.jpg",
-    backgroundColor: "#e6e6e6"
-  }
+//   {
+//     name: "Tía María",
+//     message: "Desde pequeño te he visto crecer. Estoy tan orgullosa de ti.",
+//     imageSrc: "/tia-maria.jpg",
+//     backgroundColor: "#f8a792"
+//   },
+//   {
+//     name: "Abuelo José",
+//     message: "Eres el orgullo de nuestra familia. Bendiciones en tu día.",
+//     imageSrc: "/abuelo-jose.jpg",
+//     backgroundColor: "#84906c"
+//   },
+//   {
+//     name: "Primo Roberto",
+//     message: "Juntos desde la infancia, siempre seremos familia.",
+//     imageSrc: "/primo-roberto.jpg",
+//     backgroundColor: "#f7e4c3"
+//   },
+//   {
+//     name: "Andrea",
+//     message: "Tu amistad significa el mundo para mí. ¡Feliz día!",
+//     imageSrc: "/andrea.jpg",
+//     backgroundColor: "#e6e6e6"
+//   }
+
+
 ];
 
 export default function BirthdayPage() {

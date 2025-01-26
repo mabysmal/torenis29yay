@@ -99,7 +99,7 @@ const FamilyCard: React.FC<FamilyCardProps> = ({
             />
           </div>
           <p className="text-lg italic">
-            {"\"" + message + "\""} {/* Usando escape de comillas */}
+            {"\"" + message + "\""}
           </p>
         </div>
       </div>
