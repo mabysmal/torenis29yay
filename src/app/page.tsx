@@ -6,39 +6,38 @@ import ConfettiBackground from './components/confetti';
 const familyMembers = [
   // Familia
   {
-    name: "Mamá",
+    name: "Mom",
     message: "Mi amor, eres la luz que ilumina nuestra familia. ¡Feliz cumpleaños!",
     imageSrc: "/mama.jpg",
     backgroundColor: "#f8a792"
   },
   {
-    name: "Papá", 
+    name: "Dad", 
     message: "Eres mi héroe, mi mejor amigo. Gracias por todo tu amor.",
     imageSrc: "/papa.jpg",
     backgroundColor: "#84906c"
   },
   {
-    name: "Hermana",
-    message: "Juntas siempre, tu sonrisa me hace feliz. Te amo.",
-    imageSrc: "/hermana.jpg", 
+    name: "Aiden",
+    message: "",
+    imageSrc: "/aiden.png", 
     backgroundColor: "#f7e4c3"
   },
   {
-    name: "Yo",
+    name: "Tiffany",
     message: "Gracias por ser mi familia, por su amor incondicional.",
     imageSrc: "/yo.jpg",
     backgroundColor: "#e6e6e6"
   },
   
-  // Amigos del esposo
   {
-    name: "Carlos",
+    name: "Rosa/Caramel",
     message: "Amigo, eres como un hermano. Celebro tu vida hoy y siempre.",
     imageSrc: "/carlos.jpg",
     backgroundColor: "#f8a792"
   },
   {
-    name: "Daniel",
+    name: "Mabel",
     message: "Compañero de aventuras, gracias por todos los momentos increíbles.",
     imageSrc: "/daniel.jpg",
     backgroundColor: "#84906c"
