@@ -16,7 +16,9 @@ export default {
       },
     },
     fontFamily: {
-      'birthday': ['Indie Flower', 'cursive']
+      'indie-flower': ['var(--font-indie-flower)'],
+      'henny-penny': ['var(--font-henny-penny)'],
+      'inter': ['var(--font-inter)']
     },
     backgroundImage: {
       'birthday-pattern': 'url("/birthday-pattern.svg")'

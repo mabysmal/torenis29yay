@@ -1,11 +1,11 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 interface FamilyCardProps {
   name: string;
   message: string;
-  imageSrc: string;
+  imageSrc: string | string[]; // Allow single image or array of images
   backgroundColor: string;
 }
 
@@ -16,6 +16,23 @@ const FamilyCard: React.FC<FamilyCardProps> = ({
   backgroundColor 
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Determine if multiple images are provided
+  const images = Array.isArray(imageSrc) ? imageSrc : [imageSrc];
+
+  // Image carousel effect
+  useEffect(() => {
+    if (images.length > 1 && isFlipped) {
+      const timer = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => 
+          (prevIndex + 1) % images.length
+        );
+      }, 5000);
+
+      return () => clearInterval(timer);
+    }
+  }, [images, isFlipped]);
 
   const toggleCard = () => {
     setIsFlipped(!isFlipped);
@@ -49,7 +66,7 @@ const FamilyCard: React.FC<FamilyCardProps> = ({
           ${isFlipped ? 'rotate-y-180' : ''}
         `}
       >
-        {/* Vista inicial con solo el nombre */}
+        {/* Initial view with only the name */}
         <div 
           className="
             absolute 
@@ -61,7 +78,7 @@ const FamilyCard: React.FC<FamilyCardProps> = ({
             items-center 
             justify-center 
             text-3xl 
-            font-birthday 
+            font-indie-flower 
             font-bold
           "
           style={{ backgroundColor }}
@@ -69,7 +86,7 @@ const FamilyCard: React.FC<FamilyCardProps> = ({
           {name}
         </div>
 
-        {/* Vista detallada al hacer clic */}
+        {/* Detailed view on click */}
         <div 
           className="
             absolute 
@@ -84,23 +101,64 @@ const FamilyCard: React.FC<FamilyCardProps> = ({
             text-center 
             p-6 
             rounded-xl
+            overflow-hidden
           "
           style={{ backgroundColor }}
         >
-          <h2 className="text-2xl font-birthday font-bold mb-4">
+          <h2 className="text-2xl font-indie-flower font-bold mb-4">
             {name}
           </h2>
-          <div className="relative w-full h-48 mb-4">
-            <Image 
-              src={imageSrc} 
-              alt={`Tarjeta de ${name}`}
-              fill
-              className="object-cover rounded-lg"
-            />
+          
+          {/* Image section with max height constraint */}
+          <div className="relative w-full max-h-[50%] h-48 mb-4 overflow-hidden">
+            {images.length > 1 ? (
+              <div className="relative w-full h-full">
+                <Image 
+                  src={images[currentImageIndex]} 
+                  alt={`Tarjeta de ${name}`}
+                  fill
+                  className="object-cover rounded-lg transition-opacity duration-500"
+                />
+                {images.length > 1 && (
+                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
+                    {images.map((_, index) => (
+                      <div 
+                        key={index} 
+                        className={`
+                          w-2 h-2 rounded-full 
+                          ${index === currentImageIndex ? 'bg-white' : 'bg-gray-400'}
+                        `}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Image 
+                src={images[0]} 
+                alt={`Tarjeta de ${name}`}
+                fill
+                className="object-cover rounded-lg"
+              />
+            )}
           </div>
-          <p className="text-lg italic">
+          
+          {/* Message section with vertical scroll if too long */}
+          <div 
+            className="
+              w-full 
+              max-h-[50%] 
+              overflow-y-auto 
+              text-lg 
+              italic 
+              pr-2 
+              scrollbar-thin 
+              scrollbar-thumb-gray-300 
+              scrollbar-track-transparent
+            "
+          >
             {"\"" + message + "\""}
-          </p>
+          </div>
         </div>
       </div>
     </div>
