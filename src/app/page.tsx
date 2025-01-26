@@ -86,7 +86,7 @@ export default function BirthdayPage() {
           p-6
           rounded-xl
           font-henny-penny 
-          text-family-peach 
+          text-family-peach
           mb-12 
           text-center 
           z-10 
