@@ -36,7 +36,7 @@ const familyMembers = [
   },
   {
     name: "Mabel",
-    message: "",
+    message: "Happy Birthday to the cutiest, most handsome, funniest and lovely husband in the whole galaxy. Thank you for filling our days with fun and love. For another year with lots of silliness and cuddles. Hope you're smiling and enjoying your day whenever you read this. Te adoro con todo mi corazon, mi amor <3",
     imageSrc: ["/mabel.jpg", "/mabel2.jpg", "/mabel3.jpg"],
     backgroundColor: "#84906c"
   },
