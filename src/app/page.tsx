@@ -93,7 +93,7 @@ export default function BirthdayPage() {
           relative
         "
       >
-        ¡Feliz Cumpleaños! 🎂
+        Happy 29th Birthday, Toren! 🎂
       </h1>
       <div 
         className="
