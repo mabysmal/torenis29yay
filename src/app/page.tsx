@@ -61,7 +61,8 @@ const familyMembers = [
   },
   {
     name: "Uncle Rick",
-    message: "",
+    message: "Happy Birthday Toren, how time flys.. From this to 2025  you have yourself a great day little butterfly!🎂",
+    imageSrc: "/rick.jpg",
     backgroundColor: "#84906c"
   },
   {
